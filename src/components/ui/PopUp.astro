@@ -1,0 +1,28 @@
+---
+import Image from 'astro/components/Image.astro';
+import popupImage from '../../images/PROMOJUNIO.jpg';
+---
+
+<div
+  id='popup'
+  class='popup fixed bottom-6 md:left-6 left-0 z-[800] rounded-md'
+>
+  <div class='popup-content relative'>
+    <span
+      class='close absolute top-1 right-1 text-white hover:text-blue-600 text-5xl cursor-pointer'
+      id='close'>&times;</span
+    >
+    <div class='mx-auto max-w-[800px] w-full shadow-lg'>
+      <Image src={popupImage} alt='img' loading='eager' />
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const closeBtn = document.getElementById('close');
+  const popup = document.getElementById('popup');
+
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none'; // Hide the popup when close button is clicked
+  });
+</script>

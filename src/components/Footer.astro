@@ -1,0 +1,160 @@
+---
+import Heading from './ui/Heading.astro';
+import Image from 'astro/components/Image.astro';
+import Logo from '../images/monarca-logo-blanco.png';
+---
+
+<footer class='mt-auto'>
+  <div
+    class='bg-secondary p-12 sm:py-40 flex justify-evenly flex-wrap items-center gap-16'
+  >
+    <div class='w-52 md:w-72 lg:w-96'>
+      <Image src={Logo} loading='lazy' alt='Logo' />
+    </div>
+
+    <div class='text-white flex gap-9 sm:gap-14 flex-wrap flex-col sm:flex-row'>
+      <div class='flex flex-col gap-2'>
+        <Heading level={5} className=' text-[#ffffffc6]'>Oficinas</Heading>
+        <p
+          class='text-white lg:text-base text-xs sm:w-[300px] w-auto text-left'
+        >
+          Plaza Marina Business & Life #2302 L-20 Fracc. La Marina Mazatlán.
+        </p>
+      </div>
+
+      <div class='flex flex-col gap-4'>
+        <Heading level={5} className=' text-[#ffffffc6]'>Teléfono</Heading>
+
+        <div class='flex gap-2 flex-col'>
+          <Heading level={6} className='text-[#ffffffc6]'>ventas</Heading>
+          <p class='text-white lg:text-base text-xs'>(669) 920 5533</p>
+        </div>
+
+        <div class='flex gap-2 flex-col'>
+          <Heading level={6} className='text-[#ffffffc6]'
+            >administración</Heading
+          >
+          <p class='text-white lg:text-base text-xs'>(669) 142 2012</p>
+        </div>
+      </div>
+
+      <div class='flex flex-col gap-2'>
+        <Heading level={5} className=' text-[#ffffffc6]'>Redes sociales</Heading
+        >
+        <div class='flex gap-4'>
+          <a
+            target='_blank'
+            href='https://www.facebook.com/monarcaresidencialdeoar'
+            class='rounded-full bg-primary hover:bg-[#f37f59] p-2 transition-all'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='25'
+              height='25'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook'
+              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+                d='M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3'
+              ></path></svg
+            >
+          </a>
+
+          <a
+            target='_blank'
+            href='https://www.instagram.com/monarcaresidencialoficial/'
+            class='rounded-full bg-primary hover:bg-[#f37f59] p-2 transition-all'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='25'
+              height='25'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram'
+              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+                d='M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z'
+              ></path><path d='M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0'
+              ></path><path d='M16.5 7.5l0 .01'></path></svg
+            >
+          </a>
+
+          <a
+            target='_blank'
+            href='https://www.youtube.com/@monarcaresidencial'
+            class='rounded-full bg-primary hover:bg-[#f37f59] p-2 transition-all'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='25'
+              height='25'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube'
+              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+                d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'
+              ></path><path d='M10 9l5 3l-5 3z'></path></svg
+            >
+          </a>
+
+          <a
+            target='_blank'
+            href='https://www.tiktok.com/@monarcaresidencial'
+            class='rounded-full bg-primary hover:bg-[#f37f59] p-2 transition-all'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok'
+              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+                d='M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z'
+              ></path></svg
+            >
+          </a>
+        </div>
+      </div>
+
+      <div class='flex flex-col gap-2'>
+        <Heading level={5} className='text-[#ffffffc6]'>Correo</Heading>
+        <a href='mailto:monarcaresidencialmzt@gmail.com'>
+          <p class='text-white lg:text-base text-xs'>
+            monarcaresidencialmzt@gmail.com
+          </p>
+        </a>
+
+        <a href='mailto:oardesarrolladores@gmail.com'>
+          <p class='text-white lg:text-base text-xs'>
+            oardesarrolladores@gmail.com
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class='p-5 bg-tertiary flex justify-center'>
+    <span
+      class='lg:text-base text-xs text-white font-bold text-balance text-center'
+    >
+      Todos los derechos reservados @ Monarca Residencial 2024
+    </span>
+  </div>
+</footer>

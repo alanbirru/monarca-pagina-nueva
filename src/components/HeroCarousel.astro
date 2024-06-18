@@ -1,0 +1,215 @@
+---
+// Import the necessary assets
+import { Image } from 'astro:assets';
+import ScrollDownButton from './ui/ScrollDownButton.astro';
+
+import aPierDeCarretera from '../images/hero-carousel-img/APIEDECARRETERA_TXT.png';
+import cotosPrivados from '../images/hero-carousel-img/COTOSPRIVADOS_TXT.png';
+import exclusivasAmenidades from '../images/hero-carousel-img/EXCLUSIVASAMENIDADES_TXT.png';
+import financiamientoPersonalizado from '../images/hero-carousel-img/FINANCIAMIENTOPERSONALIZADO_TXT.png';
+import laVidaQueMereces from '../images/hero-carousel-img/LAVIDAQUEMERECES_TXT.png';
+import lotes from '../images/hero-carousel-img/LOTES_TXT.png';
+import seguridad247 from '../images/hero-carousel-img/SEGURIDAD24_7_TXT.png';
+import viveMonarcaResidencial from '../images/hero-carousel-img/VIVEMONARCARESIDENCIAL_TXT.png';
+import zonaComercial from '../images/hero-carousel-img/ZONACOMERCIAL_TXT.png';
+---
+
+<swiper-container
+  slides-per-view='1'
+  loop='true'
+  speed='300'
+  autoplay='true'
+  autoplay-delay='3000'
+  class='bg-black'
+  id='inicio'
+>
+  <swiper-slide>
+    <div
+      id='la-vida-que-mereces'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image src={laVidaQueMereces} loading='eager' alt='Logo' width={800} />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='cotos-privados'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image src={cotosPrivados} loading='eager' alt='Logo' width={800} />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='lotes'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image src={lotes} loading='eager' alt='Logo' width={800} />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='financiamiento-personalizado'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image
+          src={financiamientoPersonalizado}
+          loading='eager'
+          alt='Logo'
+          width={800}
+        />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='exclusivas-amenidades'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image
+          src={exclusivasAmenidades}
+          loading='eager'
+          alt='Logo'
+          width={800}
+        />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='zona-comercial'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image src={zonaComercial} loading='eager' alt='Logo' width={800} />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='seguridad247'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image src={seguridad247} loading='eager' alt='Logo' width={800} />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='a-pie-de-carretera'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image src={aPierDeCarretera} loading='eager' alt='Logo' width={800} />
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div
+      id='vive-monarca-residencial'
+      class={`sm:h-[80vh] h-[100vh] flex justify-center items-center mx-auto min-h-[300px] `}
+    >
+      <div class='px-8 a animate-fade-up animate-ease-in-out animate-delay-200'>
+        <Image
+          src={viveMonarcaResidencial}
+          loading='eager'
+          alt='Logo'
+          width={800}
+        />
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+
+<ScrollDownButton />
+
+<style>
+  #a-pie-de-carretera {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/APIEDECARRETERA.webp');
+  }
+
+  #cotos-privados {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/COTOSPRIVADOS.webp');
+  }
+
+  #exclusivas-amenidades {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/EXCLUSIVASAMENIDADES.webp');
+  }
+
+  #financiamiento-personalizado {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/FINANCIAMIENTOPERSONALIZADO.webp');
+  }
+
+  #la-vida-que-mereces {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/LAVIDAQUEMERECES.webp');
+  }
+
+  #lotes {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/LOTES.webp');
+  }
+
+  #seguridad247 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/SEGURIDAD24-7.webp');
+  }
+
+  #vive-monarca-residencial {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/VIVEMONARCARESIDENCIAL.webp');
+  }
+
+  #zona-comercial {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+      url('../images/hero-img/ZONACOMERCIAL.webp');
+  }
+</style>

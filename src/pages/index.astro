@@ -1,10 +1,418 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/ui/Heading.astro';
+import Section from '../components/Section.astro';
+
+import HeroCarousel from '../components/HeroCarousel.astro';
+import Button from '../components/ui/Button.astro';
+import Image from 'astro/components/Image.astro';
+import { EmailForm } from '../components/ui/EmailForm';
+
+// Amenidades icons
+import AccesoControlado from '../images/iconos-amenidades/ACCESO CONTROLADO.png';
+import Albercas from '../images/iconos-amenidades/ALBERCAS.png';
+import AreaDeJuegosInfantiles from '../images/iconos-amenidades/AREA DE JUEGOS INFANTILES.png';
+import AreasVerdes from '../images/iconos-amenidades/AREAS VERDES.png';
+import BardaPerimetral from '../images/iconos-amenidades/BARDA PERIMETRAL.png';
+import CanchasDeportivas from '../images/iconos-amenidades/CANCHAS DEPORTIVAS.png';
+import CasaClub from '../images/iconos-amenidades/CASA CLUB.png';
+import Ciclovia from '../images/iconos-amenidades/CICLOVÍA.png';
+import GimnasioAlAireLibre from '../images/iconos-amenidades/GIMNASIO AL AIRE LIBRE.png';
+import ZonaComercial from '../images/iconos-amenidades/ZONA COMERCIAL.png';
+
+import ViveConEstiloTexto from '../images/VIVECONESTILO_TEXTO_PNG.png';
+
+import imagenBloque4 from '../images/FOTO_BLOQUE4.png';
+
+import ubimonarca from '../images/ubimonarca.png';
+
+// Amenidades icons
+const amenidadesIcons = [
+  { title: 'Casa', span: 'Club', icon: CasaClub },
+  { title: 'Áreas', span: 'Verdes', icon: AreasVerdes },
+  { title: 'Canchas', span: 'Deportivas', icon: CanchasDeportivas },
+  { span: 'Albercas', icon: Albercas },
+  { title: 'Gimnasio al', span: 'Aire libre', icon: GimnasioAlAireLibre },
+  { title: 'Zona', span: 'Comercial', icon: ZonaComercial },
+  { title: 'Acceso', span: 'Controlado', icon: AccesoControlado },
+  { title: 'Barda', span: 'Perimetral', icon: BardaPerimetral },
+
+  { title: 'Área de juegos', span: 'Infantiles', icon: AreaDeJuegosInfantiles },
+];
 ---
 
-<Layout title="Welcome to Astro.">
-  <main><h1 class="text-orange-400">Monaraca Pagina</h1></main>
+<Layout
+  title='Lotes Residenciales en Mazatlán | Proyecto Monarca Residencial'
+  description='Haz crecer tu patrimonio con uno de los proyectos más grandes de Mazatlán. Lotes residenciales a solo 6 minutos de las playas de Cerritos'
+>
+  <main>
+    <HeroCarousel />
+    <Section id='proyecto'>
+      <Heading
+        level={1}
+        className='text-center text-secondary font-[vicecitylight]'
+      >
+        ¡Bienvenido a <span class='text-primary font-[vicecitybold]'>
+          Zona Norte!
+        </span>
+      </Heading>
+      <div class='flex flex-col gap-24'>
+        <div
+          class='flex flex-col justify-center items-center gap-7 w-[90%] xl:w-[50%] lg:w-[60%] md:w-[70%] mx-auto max-w-[1000px]'
+        >
+          <p class='text-center'>
+            La zona de mayor plusvalía en Mazatlán donde se construye el
+            desarrollo inmobiliario más grande del puerto: <span
+              class='font-[vicecitybold]'
+            >
+              Monarca Residencial</span
+            >, ubicado a pie de <span class='font-[vicecitybold]'>
+              carretera Habal-Cerritos</span
+            >, y con conexiones estratégicas: <span class='font-[vicecitybold]'
+              >Parque Aeroespacial, Corredor Logístico y centros comerciales</span
+            > .
+          </p>
+          <a href='Brochure-monarca.pdf' target='_blank'>
+            <Button>¡QUIERO SABER MÁS!</Button>
+          </a>
+        </div>
+        <div class='flex flex-col gap-10'>
+          <Heading
+            level={3}
+            className='text-center text-secondary font-[vicecitylight]'
+          >
+            ¡Consulta nuestra <span class='font-[vicecitybold]'>
+              promoción
+            </span> vigente!
+          </Heading>
+
+          <iframe
+            loading='lazy'
+            class='rounded-md shadow-2xl mx-auto aspect-video w-[90%] xl:w-[50%] lg:w-[60%] md:w-[70%] max-w-[1000px]'
+            src='https://www.youtube.com/embed/JmP0LRL9_H8?si=TPkD6rjNOacgwxiu'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            referrerpolicy='strict-origin-when-cross-origin'
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </Section>
+
+    <Section id='inversion'>
+      <div class='flex justify-center items-center mx-auto flex-wrap gap-10'>
+        <div class='flex justify-center gap-14 flex-col flex-wrap items-center'>
+          <Heading
+            level={1}
+            className='text-center text-primary  font-[vicecitylight]'
+          >
+            La oportunidad de tu vida <br />
+            <span class='text-primary font-[vicecitybold]'>
+              ¡a un precio único!
+            </span></Heading
+          >
+          <div class='flex flex-col justify-center items-center gap-2'>
+            <div class='sm:w-32 w-20'>
+              <svg
+                id='Capa_1'
+                data-name='Capa 1'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 1080 1080'
+                class='fill-primary'
+              >
+                <path
+                  class='cls-1'
+                  d='M54,493.12c117.85-90.73,235.71-181.45,353.56-272.17,40.04-30.82,80.09-61.61,120.14-92.42,3.73-2.87,7.48-5.7,11.68-8.91,68.49,52.67,136.71,105.13,206.76,159v-66.95h140.31c.23,3.67.66,7.29.66,10.92.04,51.81.15,103.61-.12,155.42-.03,6.71,2.1,10.86,7.44,14.92,40.72,30.96,81.19,62.26,121.73,93.46,2.49,1.91,4.92,3.89,8.41,6.66-22.21,28.89-44.22,57.52-66.87,86.99-139.47-107.31-278.51-214.28-418.35-321.87-139.14,107.05-278.21,214.04-417.82,321.46-1.79-1.94-3.53-3.58-4.97-5.45-18.72-24.24-37.37-48.54-56.13-72.76-1.84-2.37-4.28-4.28-6.44-6.4,0-.63,0-1.26,0-1.9Z'
+                ></path>
+                <path
+                  class='cls-1'
+                  d='M539.45,330.1c70.06,53.9,139.4,107.25,208.74,160.61,39.55,30.44,79.17,60.79,118.51,91.5,3.15,2.46,6.16,7.44,6.17,11.25.33,110.59.26,221.18.25,331.78,0,1.54-.18,3.08-.32,5.24h-256.41v-250.93h-142.38v250.8H205.57v-9.27c0-108.38.07-216.76-.16-325.14-.01-6.74,2.1-10.75,7.41-14.82,105.77-81.13,211.37-162.47,317.01-243.76,2.98-2.29,6-4.53,9.61-7.25Z'
+                ></path>
+              </svg>
+            </div>
+            <Heading level={3} className=' text-secondary text-center'
+              >Lote <span class='font-bold font-[vicecitybold]'>
+                residencial
+              </span>desde
+
+              <span
+                class='number block pt-2 text-primary font-[vicecitybold] transition-all ease-in-out'
+                data-target='540000'
+              >
+                $0
+              </span>
+            </Heading>
+          </div>
+
+          <div class='flex flex-col justify-center items-center gap-4'>
+            <div class='sm:w-32 w-20'>
+              <svg
+                id='Capa_1'
+                data-name='Capa 1'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 1080 1080'
+                class='fill-primary'
+              >
+                <defs>
+                  <style></style>
+                </defs>
+                <path
+                  class='cls-1'
+                  d='M15,739.42q16.78-4.08,16.78-20.47c0-52.58.15-105.16-.18-157.74-.05-7.22,2.23-10.74,8.81-13.61,53.12-23.16,106.07-46.69,159.09-70.07,2.71-1.19,5.58-2.02,9.47-3.41v185.51c8.31-3.11,15.41-5.77,24.1-9.03v186.82c13.47-8.82,25.05-15.83,35.82-23.9,2.35-1.76,2.54-7.33,2.54-11.14.13-103.11.1-206.23.1-309.34,0-77.16.02-154.33-.03-231.49,0-5.55.09-10.09,5.94-13.8,85.55-54.3,170.9-108.9,256.32-163.41,1.36-.87,2.85-1.55,5.22-2.83v989.2c-4.31,0-8.62,0-12.93,0-165.94,0-331.88,0-497.81.03-4.42,0-8.84.38-13.26.58,0-110.63,0-221.26,0-331.89ZM412.07,682.33c1.94-.14,2.73.04,3.22-.26,29.23-18.21,58.52-36.32,87.5-54.93,2.68-1.72,4.63-6.58,4.7-10.02.44-20.47.25-40.95.19-61.43,0-3.48-.4-6.96-.71-11.9-31.39,20.32-61.16,39.49-90.74,58.94-2.09,1.37-3.94,4.83-3.98,7.34-.3,23.86-.18,47.73-.18,72.27ZM412.07,295.28c27.37-17.13,52.22-33.98,78.35-48.51,13.89-7.72,18.81-16.74,17.64-32.28-1.45-19.2-.35-38.6-.35-57.99-1.95.1-2.74-.1-3.21.2-29.56,19-59.13,37.97-88.52,57.24-2.05,1.35-3.72,4.9-3.75,7.45-.28,23.87-.17,47.74-.17,73.89ZM507.64,284.04c-32.27,20.92-62.29,40.31-92.17,59.91-1.67,1.09-3.21,3.79-3.22,5.76-.22,24.42-.14,48.85-.14,73.92,2.08-.63,3.1-.72,3.88-1.2,28.94-18.05,57.9-36.07,86.7-54.34,2.23-1.41,4.71-4.58,4.75-6.97.35-24.86.21-49.72.21-77.08ZM412.13,812.02c1.74-.11,2.51.06,2.98-.23,21.4-13.26,41.91-28.33,64.4-39.37,22.9-11.25,32.33-26.37,28.61-51.79-2.17-14.84-.4-30.26-.4-45.52-2.08.16-2.86-.01-3.33.29-29.47,18.97-58.93,37.95-88.3,57.08-1.75,1.14-3.77,3.54-3.79,5.38-.25,24.7-.17,49.4-.17,74.16ZM412.08,554.61c31.88-19.96,61.62-38.42,91.08-57.31,2.47-1.58,4.21-6.04,4.33-9.23.49-12.93.21-25.89.21-38.84,0-11.04,0-22.07,0-33.75-2.66.65-3.75.65-4.51,1.15-28.89,18.67-57.79,37.31-86.53,56.21-2.15,1.42-4.36,4.67-4.39,7.1-.32,24.11-.2,48.23-.2,74.68ZM385.47,492.78c-27.9,18.08-53.95,34.8-79.7,51.97-2.11,1.41-3.05,5.84-3.1,8.89-.28,18.77-.14,37.54-.14,56.31,0,3.79,0,7.58,0,13.27,27.71-17.35,53.19-33.15,78.42-49.33,2.3-1.47,4.28-5.35,4.32-8.14.34-23.51.19-47.02.19-72.97ZM385.46,622.44c-27.81,18.01-53.53,34.61-79.12,51.39-1.72,1.13-3.57,3.65-3.59,5.54-.24,23.74-.16,47.47-.16,73.39,27.97-17.51,54.15-33.82,80.17-50.38,1.56-1,2.58-4.02,2.6-6.1.18-23.8.11-47.59.11-73.84ZM302.57,363.81c27.66-17.3,53.3-33.28,78.84-49.44,1.76-1.12,3.8-3.56,3.82-5.41.25-24.34.17-48.68.17-73.52-2.24.47-3.33.42-4.08.9-24.9,16.03-49.8,32.04-74.55,48.29-1.95,1.28-3.99,4.18-4.02,6.34-.29,23.42-.18,46.85-.18,72.85ZM385.42,365.35c-1.75,0-2.55-.25-3,.04-25.21,16.17-50.48,32.26-75.44,48.81-2.46,1.63-4.13,6.1-4.25,9.32-.48,12.93-.2,25.89-.2,38.83,0,9.68,0,19.36,0,31.14,28.15-17.59,54.09-33.75,79.93-50.08,1.44-.91,2.82-3.21,2.84-4.88.18-24.37.12-48.74.12-73.18ZM385.46,752.14c-28.01,18.14-54.01,34.81-79.72,51.93-2.11,1.4-3.04,5.84-3.07,8.89-.26,20.43-.17,40.87-.08,61.31,0,2.11.74,4.21,1.33,7.37,26.66-16.72,52.33-32.72,77.82-48.99,1.87-1.19,3.53-4.3,3.55-6.54.25-23.77.16-47.55.16-73.97ZM112.43,676.05c-20.13,9.34-38.26,17.65-56.24,26.27-1.69.81-3.47,3.55-3.49,5.42-.24,21.67-.16,43.34-.16,66.63,13.89-6.07,25.85-12.78,38.68-16.56,17.63-5.2,23.8-15.07,21.59-33.3-1.85-15.29-.38-30.98-.38-48.46ZM127.3,739.75c19.56-8.7,37.55-16.58,55.36-24.82,1.93-.89,4.09-3.88,4.12-5.92.3-21.98.18-43.96.18-67.65-19.92,9.22-38.39,17.63-56.64,26.47-1.69.82-2.87,4.4-2.89,6.71-.22,21.07-.13,42.15-.13,65.22ZM133.98,952.68c2.06,0,2.81.21,3.37-.03,11.26-4.87,22.12-11.17,33.82-14.39,19.1-5.26,25.28-16.3,22.89-35.57-1.85-14.88-.37-30.18-.37-46.74-19.81,9.17-37.77,17.31-55.51,25.92-2.05,1-4,4.58-4.03,6.99-.31,21.14-.18,42.29-.18,63.82ZM114,890.4c-11.4,5.23-21.12,11.36-31.72,14.21-23.68,6.36-32.06,20.46-28.35,44.39,1.92,12.41.34,25.36.34,39.67,20.05-8.92,38.08-16.8,55.92-25.09,1.85-.86,3.62-4.13,3.65-6.31.27-21.78.16-43.56.16-66.87ZM122.82,621.64c1.93,0,2.68.21,3.23-.03,11.23-4.9,22.06-11.25,33.74-14.48,18.87-5.21,25.84-15.63,23.25-35.24-1.96-14.85-.39-30.17-.39-47.08-20.19,9.33-38.4,17.6-56.4,26.29-1.79.86-3.26,4.31-3.29,6.57-.25,21.11-.15,42.22-.15,63.97ZM48.03,658.02c19.71-8.77,37.8-16.56,55.55-25.06,2.32-1.11,3.96-5.9,4.04-9.02.39-16.7.19-33.41.19-50.12,0-4.17,0-8.33,0-14.19-20.13,9.33-38.06,17.46-55.75,26.08-2.03.99-3.82,4.7-3.85,7.17-.3,21.12-.17,42.25-.17,65.15ZM193.65,746.55c-19.96,9.18-38.46,17.59-56.79,26.34-1.55.74-2.73,3.88-2.75,5.91-.2,21.41-.12,42.81-.12,65.91,19.83-8.8,38.42-16.97,56.89-25.42,1.37-.63,2.64-3.17,2.65-4.84.18-22.06.12-44.13.12-67.91ZM113.95,780.79c-11.04,5.08-20.1,10.93-30.02,13.49-24.89,6.42-34.04,21.15-29.98,46.41,1.93,12.03.33,24.64.33,38.41,19.52-8.7,37.22-16.47,54.78-24.56,2.05-.95,4.66-3.66,4.69-5.59.33-22.04.21-44.1.21-68.16Z'
+                ></path>
+                <path
+                  class='cls-1'
+                  d='M780.89,1070.26h-215.62V84.7c2.94,1.66,5.76,3.03,8.36,4.73,66.86,43.64,133.66,87.37,200.61,130.86,5.17,3.36,7.22,6.88,7.22,13.12-.15,276.23-.13,552.46-.15,828.69,0,2.37-.24,4.74-.42,8.17Z'
+                ></path>
+                <path
+                  class='cls-1'
+                  d='M798.96,693c34.46,11.01,67.2,21.49,99.95,31.94,51.94,16.57,103.88,33.14,155.83,49.64,5.33,1.69,9.45,2.95,9.42,10.57-.33,91.49-.21,182.97-.23,274.46,0,1.65-.19,3.31-.33,5.64h-264.65v-372.25ZM931.47,868.45c26.74,7.73,53.36,15.42,81.01,23.4,0-20.81.11-39.89-.16-58.96-.03-2.13-1.8-5.49-3.57-6.15-25.42-9.54-50.97-18.72-77.28-28.27v69.98ZM1012.49,1014.4c0-19.28-.27-37.32.14-55.34.15-6.42-1.67-9.62-8.04-11.79-21.26-7.26-42.26-15.27-63.38-22.93-3.03-1.1-6.17-1.91-9.85-3.04v69.56c26.77,7.77,53.43,15.51,81.12,23.55ZM910.43,984.84c0-20.62-.27-39.33.16-58.01.14-5.95-3.16-7.37-7.49-8.92-21.76-7.78-43.48-15.68-65.24-23.46-2.37-.85-4.92-1.18-8.42-1.99,0,22.16-.12,43.2.19,64.24.03,2,2.37,5.17,4.26,5.74,25,7.55,50.12,14.74,76.54,22.41ZM910.44,862.43c0-19.33-.43-37.37.21-55.37.26-7.32-2.63-10.08-8.98-12.16-13.56-4.44-26.88-9.62-40.32-14.45-10.11-3.64-20.25-7.2-31.85-11.33,0,23.02-.15,44.4.26,65.77.04,1.92,3.4,4.79,5.75,5.5,24.37,7.39,48.85,14.42,74.94,22.03Z'
+                ></path>
+              </svg>
+            </div>
+            <Heading level={3} className=' text-secondary text-center'
+              >Lote <span class='text-secondary font-[vicecitybold]'>
+                comercial</span
+              > desde <span
+                class='number block pt-2 text-primary font-[vicecitybold] transition-all ease-in-out'
+                data-target='940000'
+              >
+                $0</span
+              >
+            </Heading>
+          </div>
+        </div>
+        <div class='sm:w-[50%] w[60%] block4-img'>
+          <Image src={imagenBloque4} loading='lazy' alt='Logo' />
+        </div>
+      </div>
+
+      <div class='bg-secondary p-8 w-full flex justify-center flex-col gap-6'>
+        <p class='text-[#ffffffd4] text-center'>
+          Arma tu <span class='font-bold font-[vicecitybold] text-[23px]'>
+            Plan de Financiamiento Personalizado</span
+          > vía WhatsApp al <br />
+        </p>
+
+        <a href='https://wa.link/tc116i' class='mx-auto' target='_blank'>
+          <button
+            class='p-4 bg-primary rounded-md text-white text-md lg:text-base font-[vicecitybold] shadow-lg hover:scale-105 hover:shadow-2xl transition-all sm:w-[250px] mx-auto flex justify-center items-center gap-2'
+          >
+            <svg
+              class='text-white'
+              xmlns='http://www.w3.org/2000/svg'
+              width='35'
+              height='35'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp'
+              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+                d='M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9'></path><path
+                d='M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1'
+              ></path></svg
+            >
+            <span> (669) 920 5533 </span>
+          </button>
+        </a>
+      </div>
+    </Section>
+
+    <Section id='amenidades'>
+      <div class='bg-[#5f5b4e] w-full shadow-lg'>
+        <div
+          class='image-container w-full sm:h-[50vh] h-[35vh] sm:min-h-[450px] min-h-[300px] animate-fade animate-once animate-ease-out flex justify-start items-center'
+        >
+          <div
+            class='sm:w-[600px] w-[80%] p-6 sm:ml-[5vw] mx-auto rounded-md bg-[#ffffffa2] bg-none'
+          >
+            <Image src={ViveConEstiloTexto} loading='lazy' alt='Logo' />
+          </div>
+        </div>
+      </div>
+
+      <Heading
+        level={1}
+        className='text-primary font-[vicecitybold]  text-center'
+        >Amenidades
+      </Heading>
+
+      <div class='flex justify-center items-center flex-col gap-12'>
+        <ul class='grid-container'>
+          {
+            amenidadesIcons.map((item) => {
+              return (
+                <li class='text-secondary flex items-center gap-4 cursor-default p-3 rounded-md'>
+                  <div
+                    class='w-16 bg-secondary p-3 rounded-full'
+                    style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'
+                  >
+                    <Image src={item.icon} loading='lazy' alt='Logo' />
+                  </div>
+                  <Heading level={4}>
+                    {item.title} {item.title ? <br /> : ''}
+                    <span class='font-[vicecitybold]'>{item.span}</span>
+                  </Heading>
+                </li>
+              );
+            })
+          }
+        </ul>
+
+        <span
+          class='flex justify-end text-lg font-bold shadow-md p-4 text-secondary'
+        >
+          *Servicios de agua, drenaje y alumbrado público en cada coto.
+        </span>
+      </div>
+    </Section>
+
+    <Section id='ubicacion' className=' bg-secondary sm:p-10 py-8'>
+      <Heading
+        level={1}
+        className='text-white font-[vicecitylight] text-center'
+      >
+        Ubicación
+        <span class='text-primary font-[vicecitybold]'>Estratégica</span>
+      </Heading>
+      <div class='mx-auto w-[140px] sm:w-[200px]'>
+        <Image src={ubimonarca} loading='lazy' alt='Logo' />
+      </div>
+      <p
+        class='mx-auto text-center text-white max-w[1000px] w-[90%] xl:w-[50%] lg:w-[60%] md:w-[70%] max-w-[1000px]'
+      >
+        Explora el confort de vivir en <span class='font-[vicecitybold]'
+          >Monarca Residencial</span
+        > , donde la suave brisa del mar te invita a relajarte y a disfrutar de momentos
+        inolvidables junto a tu familia. Estratégicamente ubicado en <span
+          class='font-[vicecitybold]'>Zona Norte</span
+        >, Monarca Residencial te ofrece una fácil conexión a otros desarrollos
+        inmobiliarios, centros comerciales y ¡mucho más!
+      </p>
+
+      <a
+        href='https://www.google.com.mx/maps/search/monarca+residencial/@23.3424032,-106.4500055,15.25z?hl=es-419&entry=ttu'
+        class='mx-auto'
+        target='_blank'
+      >
+        <button
+          class='p-4 bg-primary text-white rounded-md text-md lg:text-base font-[vicecitybold] shadow-lg hover:scale-105 hover:shadow-2xl transition-all sm:w-[250px] mx-auto'
+          >¿Cómo llegar?</button
+        >
+      </a>
+    </Section>
+
+    <Section id='contacto'>
+      <Heading
+        level={1}
+        className='text-secondary font-[vicecitylight] text-center'
+      >
+        Contacta a nuestros <br />
+        <span class='text-primary font-[vicecitybold] block'>Asesores</span>
+      </Heading>
+
+      <div>
+        <EmailForm client:load />
+      </div>
+    </Section>
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  .block4-img img {
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+
+  .image-container {
+    background-image: url('/src/images/IMAGENAMENIDADES.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65%;
+
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Default grid layout for large screens */
+  @media (min-width: 1400px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+    }
+  }
+  /* Adjust grid for medium screens */
+  @media (min-width: 768px) and (max-width: 1199p x) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+  /* Adjust grid for small screens */
+  @media (max-width: 767px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* Adjust grid for extra small screens */
+  @media (max-width: 479px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Animacion de los numeros
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.number');
+    const duration = 4000; // Total duration of the animation in milliseconds
+
+    const animateCounters = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const animateCount = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const startTime = performance.now();
+
+            const updateCount = (currentTime) => {
+              const elapsedTime = currentTime - startTime;
+              const progress = Math.min(elapsedTime / duration, 1); // Calculate progress (0 to 1)
+              const easedProgress = 1 - Math.pow(1 - progress, 25); // Ease-out quartic function
+
+              const currentValue = Math.ceil(easedProgress * target);
+              counter.innerText = `$${currentValue.toLocaleString()} MXN`;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                counter.innerText = `$${target.toLocaleString()} MXN`; // Ensure the final value is set correctly
+              }
+            };
+
+            requestAnimationFrame(updateCount);
+          };
+
+          counters.forEach((counter) => animateCount(counter));
+
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animateCounters, {
+      threshold: 0.4,
+    });
+
+    observer.observe(document.getElementById('inversion'));
+  });
+
+  // YOUTUBE PLAY
+</script>
