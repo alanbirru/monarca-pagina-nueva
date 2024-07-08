@@ -27,8 +27,9 @@ export const EmailForm = () => {
   return (
     <>
       {success ? (
-        <span className=' text-white font-bold text-xl flex justify-center items-center bg-secondary text-center w-[250px] mx-auto shadow-md rounded-sm p-2'>
-          ¡Mensaje enviado <br /> correctamente!
+        <span className=' text-white font-bold text-lg flex justify-center items-center bg-secondary text-center md:w-[600px] mx-auto shadow-md rounded-md p-3 w-[90%] '>
+          Tus datos fueron registrados correctamente. En breve uno de nuestros
+          asesores te atenderá.
         </span>
       ) : (
         <form

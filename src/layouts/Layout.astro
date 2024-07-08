@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
 
 const { title, description } = Astro.props;
@@ -13,7 +13,6 @@ import PopUp from '../components/ui/PopUp.astro';
 
 import Image from 'astro/components/Image.astro';
 import logoNaranja from '../images/monarcanaranja.png';
-import popoutImagen from '../images/PROMOJUNIO.jpg';
 ---
 
 <!doctype html>
